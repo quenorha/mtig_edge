@@ -2,9 +2,9 @@
 
 	echo "Téléchargement des fichiers de configuration"
 	mkdir /root/config
-	wget https://raw.githubusercontent.com/quenorha/mtig/main/conf/mosquitto.conf -P /root/config/
-	wget https://raw.githubusercontent.com/quenorha/mtig/main/conf/telegraf.conf -P /root/config/
-	wget https://raw.githubusercontent.com/quenorha/mtig/main/conf/daemon.json -P /root/config/
+	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/mosquitto.conf -P /root/config/
+	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/telegraf.conf -P /root/config/
+	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/daemon.json -P /root/config/
 
 	echo "Téléchargement image Portainer"
 	docker pull portainer/portainer-ce:2.6.1
