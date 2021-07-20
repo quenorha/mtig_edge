@@ -23,10 +23,10 @@ Ce script fonctionne sur les plateformes suivantes :
 
 Le Edge Computer doit disposer d'un accès à Internet (penser à renseigner DNS et Gateway).
 
-http://[adresseIPduEdgeComputer]:8090 
+http://[adresseIPduEdgeComputer]:9090/network
 
 La date et heure du contrôleur doivent être mises à jour pour éviter des erreurs lors de l'échange TLS. 
-Dans le WBM, mettre à jour l'heure dans <em>Configuration / Clock</em> ou spécifier un serveur de temps dans <em>Ports and service / NTP Client</em>
+Dans le WBM, mettre à jour l'heure dans http://[adresseIPduEdgeComputer]:9090/system
 
 ## Installation
 Se connecter en SSH au contrôleur via PuTTy par exemple, en tant que super utilisateur (<em>root / wago</em> par défaut, penser à le modifier).
@@ -97,3 +97,5 @@ Au niveau de l'URL, renseigner http://c_influxdb:8086 \
 Au niveau de <em>Database</em>, renseigner telegraf. Cette base est créée automatiquement par Telegraf. \
 Cliquer sur <em>Save And Test</em>, <em>Data source is working</em> doit s'afficher en vert. 
 
+## Evolution
+Le MQTT doit être sécurisé en mettant en place les certificats TLS. 
