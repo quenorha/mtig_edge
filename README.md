@@ -34,7 +34,7 @@ Se connecter en SSH au contrôleur via PuTTy par exemple, en tant que super util
 Exécuter la commande suivante qui permet le téléchargement de ce script, lui donne les droits d'exécution et l'exécute.
 
 ```
-wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/install_edge.sh && chmod +x install_edge.sh && ./install_edge.sh
+wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/install_edge.sh -O $PWD/install.edge.sh && chmod +x install_edge.sh && ./install_edge.sh
 ```
 
 ## Configuration
