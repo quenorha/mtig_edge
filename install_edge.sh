@@ -2,8 +2,8 @@
 
 	echo "Téléchargement des fichiers de configuration"
 	mkdir /root/config
-	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/mosquitto.conf -P /root/config/
-	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/telegraf.conf -P /root/config/
+	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/mosquitto.conf -O /root/config/mosquitto.conf
+	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/telegraf.conf -O /root/config/mosquitto.conf
 	
 	echo "Téléchargement image Portainer"
 	docker pull portainer/portainer-ce:2.6.1
