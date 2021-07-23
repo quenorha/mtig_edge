@@ -4,8 +4,7 @@
 	mkdir /root/config
 	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/mosquitto.conf -P /root/config/
 	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/telegraf.conf -P /root/config/
-	wget https://raw.githubusercontent.com/quenorha/mtig_edge/main/conf/daemon.json -P /root/config/
-
+	
 	echo "Téléchargement image Portainer"
 	docker pull portainer/portainer-ce:2.6.1
 
@@ -42,5 +41,5 @@
 	docker run -d -p 3000:3000 --name c_grafana -e GF_PANELS_DISABLE_SANITIZE_HTML=true --net=wago --restart unless-stopped -v v_grafana grafana/grafana:8.0.0
 
 	echo "Démarrage Telegraf"
-	docker run -d --restart=unless-stopped --name=c_telegraf -v /root/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf:1.19.1
+	docker run -d --net=wago --restart=unless-stopped --name=c_telegraf -v /root/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf:1.19.1
 	
