@@ -75,7 +75,7 @@ processdata,source=Edge counter=12563signal=-58
  ```
 
 ### 3) Telegraf
-Le fichier <b>/root/config/telegraf.conf</b> (dans le dossier /root/config) doit être adapté pour renseigner l'adresse IP du broker, ainsi que le topic MQTT. 
+Le fichier <b>/root/config/telegraf.conf</b> (dans le dossier /root/config) peut être adapté pour modifier le topic MQTT. 
 
 Une fois la configuration modifiée, redémarrer le container Telegraf. 
  ```
