@@ -38,7 +38,7 @@
 	docker run -d -p 8086:8086 --name c_influxdb --net=wago --restart unless-stopped -v v_influxdb:/var/lib/influxdb influxdb:1.8.10
 
 	echo "Démarrage Grafana"
-	docker run -d -p 3000:3000 --name c_grafana -e GF_PANELS_DISABLE_SANITIZE_HTML=true --net=wago --restart unless-stopped -v v_grafana grafana/grafana:latest
+	docker run -d -p 3000:3000 --name c_grafana -e GF_PANELS_DISABLE_SANITIZE_HTML=true --net=wago --restart unless-stopped -v v_grafana:/var/lib/grafana grafana/grafana-oss
 
 	echo "Démarrage Telegraf"
 	docker run -d --net=wago --restart=unless-stopped --name=c_telegraf -v /root/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf:latest
