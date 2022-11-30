@@ -17,7 +17,7 @@
 	docker run -d -p 8086:8086 --name c_influxdb --net=wago --restart unless-stopped -v v_influxdb:/var/lib/influxdb influxdb:1.8.10
 
 	echo "Démarrage Grafana"
-	docker run -d -p 3000:3000 --name c_grafana --net=wago --restart unless-stopped -v v_grafana:/var/lib/grafana grafana/grafana-oss
+	docker run -d -p 3000:3000 --name c_grafana --net=wago --restart unless-stopped -v v_grafana:/var/lib/grafana  -v $(pwd)/mtig_edge/conf/provisioning/:/etc/grafana/provisioning/ grafana/grafana-oss
 
 	echo "Démarrage Telegraf MQTT"
 	docker run -d --net=wago --restart=unless-stopped --name=c_telegraf -v $(pwd)/mtig_edge/conf/telegrafmqtt.conf:/etc/telegraf/telegraf.conf:ro telegraf:latest
