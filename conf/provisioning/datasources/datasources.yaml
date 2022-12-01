@@ -1,0 +1,79 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb_mqtt
+    type: influxdb
+    access: proxy
+    database: mqtt
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET
+      
+  - name: influxdb_docker
+    type: influxdb
+    access: proxy
+    database: docker
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET
+
+  - name: influxdb_weather
+    type: influxdb
+    access: proxy
+    database: weather
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET
+
+  - name: influxdb_snmp
+    type: influxdb
+    access: proxy
+    database: snmp
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET
+
+  - name: influxdb_modbus
+    type: influxdb
+    access: proxy
+    database: modbus
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET
+      
+  - name: influxdb_internal
+    type: influxdb
+    access: proxy
+    database: _internal
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET  
+
+  - name: influxdb_speedtest
+    type: influxdb
+    access: proxy
+    database: speedtest
+    user: 
+    password: 
+    url: http://c_influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET            
