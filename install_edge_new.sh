@@ -28,8 +28,8 @@
 	echo "Démarrage Telegraf Speedtest"
 	docker run -ti --rm -v ${HOME}:/root -v $(pwd):/git alpine/git clone https://github.com/quenorha/speedtest
 	docker build -t wago/speedtest:1.0 $(pwd)/speedtest
-	docker run -d --name c_speedtest -v /root/speedtest-storage:/var/log/speedtest wago/speedtest:1.0
-	docker run -d --name=c_telegraf_speedtest -v $(pwd)/speedtest:/var/log/speedtest -v $(pwd)/speedtest/telegraf_speedtest.conf:/etc/telegraf/telegraf.conf --network=wago telegraf
+	docker run -d --name c_speedtest  --restart=unless-stopped -v /root/speedtest-storage:/var/log/speedtest wago/speedtest:1.0
+	docker run -d --name=c_telegraf_speedtest  --restart=unless-stopped -v $(pwd)/speedtest:/var/log/speedtest -v $(pwd)/speedtest/telegraf_speedtest.conf:/etc/telegraf/telegraf.conf --network=wago telegraf
 
 	echo "Démarrage Telegraf SNMP"
     docker run -ti --rm -v ${HOME}:/root -v $(pwd):/git alpine/git clone https://github.com/quenorha/snmp_monitoring
