@@ -26,15 +26,15 @@
 	docker run -d --user telegraf:$(stat -t /var/run/docker.sock | awk '{ print $6 }') --net=wago --restart=unless-stopped --name=c_telegrafdocker -v /var/run/docker.sock:/var/run/docker.sock -v /root/conf/telegrafdocker.conf:/etc/telegraf/telegraf.conf:ro telegraf:latest
 	
 	echo "Démarrage Telegraf Speedtest"
-	docker run -ti --rm -v ${HOME}:/root -v $(pwd):/git alpine/git clone https://github.com/quenorha/speedtest
-	docker build -t wago/speedtest:1.0 $(pwd)/speedtest
-	docker run -d --name c_speedtest  --restart=unless-stopped -v /root/speedtest-storage:/var/log/speedtest wago/speedtest:1.0
+	#docker run -ti --rm -v ${HOME}:/root -v $(pwd):/git alpine/git clone https://github.com/quenorha/speedtest
+	#docker build -t wago/speedtest:1.0 $(pwd)/speedtest
+	docker run -d --name c_speedtest  --restart=unless-stopped -v $(pwd)/speedtest:/var/log/speedtest quenorha/speedtest:1.0
 	docker run -d --name=c_telegraf_speedtest  --restart=unless-stopped -v $(pwd)/speedtest:/var/log/speedtest -v $(pwd)/speedtest/telegraf_speedtest.conf:/etc/telegraf/telegraf.conf --network=wago telegraf
 
 	echo "Démarrage Telegraf SNMP"
-    docker run -ti --rm -v ${HOME}:/root -v $(pwd):/git alpine/git clone https://github.com/quenorha/snmp_monitoring
-	docker build -t wago/telegrafsnmp:1.0 $(pwd)/snmp_monitoring
-	docker run -d --net=wago --restart=unless-stopped --name=c_telegrafsnmp -v $(pwd)/snmp_monitoring/telegrafsnmp.conf:/etc/telegraf/telegraf.conf:ro wago/telegrafsnmp:1.0
+    #docker run -ti --rm -v ${HOME}:/root -v $(pwd):/git alpine/git clone https://github.com/quenorha/snmp_monitoring
+	#docker build -t wago/telegrafsnmp:1.0 $(pwd)/snmp_monitoring
+	docker run -d --net=wago --restart=unless-stopped --name=c_telegrafsnmp -v $(pwd)/snmp_monitoring/telegrafsnmp.conf:/etc/telegraf/telegraf.conf:ro quenorha/telegrafsnmp:1.0
 
 	echo "Démarrage vnstat"
     docker run -d --restart=unless-stopped --network=host -e HTTP_PORT=8685 -v /etc/localtime:/etc/localtime:ro -v /etc/timezone:/etc/timezone:ro --name vnstat vergoh/vnstat

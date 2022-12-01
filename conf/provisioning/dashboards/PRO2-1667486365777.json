@@ -1,8 +1,8 @@
 {
   "__inputs": [
     {
-      "name": "DS_INFLUXDB",
-      "label": "InfluxDB",
+      "name": "DS_INFLUXDB_MODBUS",
+      "label": "influxdb_modbus",
       "description": "",
       "type": "datasource",
       "pluginId": "influxdb",
@@ -33,7 +33,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "9.2.2"
+      "version": "9.2.3"
     },
     {
       "type": "datasource",
@@ -99,7 +99,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_MODBUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -204,7 +204,7 @@
           "alias": "Output power",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -248,7 +248,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_MODBUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -295,12 +295,12 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "9.2.3",
       "targets": [
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -344,7 +344,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_MODBUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -393,12 +393,12 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "9.2.3",
       "targets": [
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -460,7 +460,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_MODBUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -538,13 +538,13 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "9.2.3",
       "targets": [
         {
           "alias": "Last second",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -585,7 +585,7 @@
           "alias": "Last minute",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -627,7 +627,7 @@
           "alias": "Last hour",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -672,7 +672,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_MODBUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -751,7 +751,7 @@
           "alias": "Pout",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -814,7 +814,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_MODBUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -912,7 +912,7 @@
           "alias": "Output voltage",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -953,7 +953,7 @@
           "alias": "Output current",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_MODBUS}"
           },
           "groupBy": [
             {
@@ -1011,6 +1011,6 @@
   "timezone": "",
   "title": "PRO2",
   "uid": "oHa7v8Qnz",
-  "version": 5,
+  "version": 1,
   "weekStart": ""
 }

@@ -1,8 +1,8 @@
 {
   "__inputs": [
     {
-      "name": "DS_INFLUXDB",
-      "label": "InfluxDB",
+      "name": "DS_INFLUXDB_SNMP",
+      "label": "influxdb_snmp",
       "description": "",
       "type": "datasource",
       "pluginId": "influxdb",
@@ -21,7 +21,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "9.2.2"
+      "version": "9.2.3"
     },
     {
       "type": "datasource",
@@ -112,7 +112,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "fieldConfig": {
         "defaults": {
@@ -192,7 +192,7 @@
           "alias": "$tag_device ($tag_agent_host)",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -256,7 +256,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "fieldConfig": {
         "defaults": {
@@ -305,13 +305,13 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "9.2.3",
       "targets": [
         {
           "alias": "$tag_device",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -373,7 +373,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "fieldConfig": {
         "defaults": {
@@ -452,7 +452,7 @@
           "alias": "$tag_device: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -505,7 +505,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "fieldConfig": {
         "defaults": {
@@ -582,13 +582,13 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "9.2.3",
       "targets": [
         {
           "alias": "$tag_device",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -694,7 +694,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "description": "",
       "fieldConfig": {
@@ -777,7 +777,7 @@
           "alias": "$col",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -836,7 +836,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "description": "",
       "fieldConfig": {
@@ -919,7 +919,7 @@
           "alias": "$col",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -978,7 +978,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "description": "",
       "fieldConfig": {
@@ -1026,13 +1026,13 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.2.2",
+      "pluginVersion": "9.2.3",
       "targets": [
         {
           "alias": "$col",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -1091,7 +1091,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "description": "",
       "fieldConfig": {
@@ -1143,7 +1143,7 @@
           "alias": "$tag_ifDescr",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -1202,7 +1202,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "uid": "${DS_INFLUXDB_SNMP}"
       },
       "description": "",
       "fieldConfig": {
@@ -1254,7 +1254,7 @@
           "alias": "$tag_ifDescr",
           "datasource": {
             "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "uid": "${DS_INFLUXDB_SNMP}"
           },
           "groupBy": [
             {
@@ -1321,7 +1321,7 @@
         "current": {},
         "datasource": {
           "type": "influxdb",
-          "uid": "${DS_INFLUXDB}"
+          "uid": "${DS_INFLUXDB_SNMP}"
         },
         "definition": "SHOW TAG VALUES  FROM \"snmp\" WITH KEY = \"device\" ",
         "hide": 0,
@@ -1346,6 +1346,6 @@
   "timezone": "browser",
   "title": "WAGO SNMP Monitoring",
   "uid": "t2ECES5nk",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
