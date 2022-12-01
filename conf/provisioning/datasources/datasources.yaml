@@ -19,7 +19,7 @@ datasources:
     user: 
     password: 
     url: http://c_influxdb:8086
-    isDefault: true
+    isDefault: false
     jsonData:
       httpMode: GET
 
@@ -30,7 +30,7 @@ datasources:
     user: 
     password: 
     url: http://c_influxdb:8086
-    isDefault: true
+    isDefault: false
     jsonData:
       httpMode: GET
 
@@ -41,7 +41,7 @@ datasources:
     user: 
     password: 
     url: http://c_influxdb:8086
-    isDefault: true
+    isDefault: false
     jsonData:
       httpMode: GET
 
@@ -52,7 +52,7 @@ datasources:
     user: 
     password: 
     url: http://c_influxdb:8086
-    isDefault: true
+    isDefault: false
     jsonData:
       httpMode: GET
       
@@ -63,7 +63,7 @@ datasources:
     user: 
     password: 
     url: http://c_influxdb:8086
-    isDefault: true
+    isDefault: false
     jsonData:
       httpMode: GET  
 
@@ -74,6 +74,6 @@ datasources:
     user: 
     password: 
     url: http://c_influxdb:8086
-    isDefault: true
+    isDefault: false
     jsonData:
       httpMode: GET            
