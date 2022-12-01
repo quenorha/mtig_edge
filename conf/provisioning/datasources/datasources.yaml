@@ -15,7 +15,7 @@ datasources:
   - name: influxdb_docker
     type: influxdb
     access: proxy
-    database: docker
+    database: dockerdb
     user: 
     password: 
     url: http://c_influxdb:8086

@@ -1,12 +1,12 @@
 {
   "__inputs": [
     {
-      "name": "influxdb_docker",
-      "label": "InfluxDB",
+      "name": "influxdb_docker_docker",
+      "label": "influxdb_docker",
       "description": "",
       "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
+      "pluginId": "influxdb_docker",
+      "pluginName": "influxdb_docker"
     }
   ],
   "__elements": {},
@@ -25,8 +25,8 @@
     },
     {
       "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
+      "id": "influxdb_docker",
+      "name": "influxdb_docker",
       "version": "1.0.0"
     },
     {
@@ -88,8 +88,8 @@
   "panels": [
     {
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "fieldConfig": {
         "defaults": {
@@ -152,8 +152,8 @@
       "targets": [
         {
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -197,8 +197,8 @@
     },
     {
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "fieldConfig": {
         "defaults": {
@@ -264,8 +264,8 @@
       "targets": [
         {
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -314,8 +314,8 @@
     },
     {
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "fieldConfig": {
         "defaults": {
@@ -381,8 +381,8 @@
       "targets": [
         {
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -432,8 +432,8 @@
     {
       "columns": [],
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "fontSize": "100%",
       "gridPos": {
@@ -489,8 +489,8 @@
       "targets": [
         {
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -574,8 +574,8 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "decimals": 0,
       "fill": 5,
@@ -621,8 +621,8 @@
         {
           "alias": "$tag_container_name",
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -732,8 +732,8 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "decimals": 0,
       "fill": 5,
@@ -781,8 +781,8 @@
         {
           "alias": "$tag_container_name",
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -892,8 +892,8 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "decimals": 0,
       "fill": 5,
@@ -944,8 +944,8 @@
         {
           "alias": "$tag_container_name RX traffic",
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -1003,8 +1003,8 @@
         {
           "alias": "$tag_container_name TX traffic",
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -1097,8 +1097,8 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "type": "influxdb",
-        "uid": "${DS_INFLUXDB}"
+        "type": "influxdb_docker",
+        "uid": "${DS_influxdb_docker}"
       },
       "decimals": 0,
       "fill": 5,
@@ -1149,8 +1149,8 @@
         {
           "alias": "$tag_container_name IO_write",
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -1208,8 +1208,8 @@
         {
           "alias": "$tag_container_name IO_read",
           "datasource": {
-            "type": "influxdb",
-            "uid": "${DS_INFLUXDB}"
+            "type": "influxdb_docker",
+            "uid": "${DS_influxdb_docker}"
           },
           "groupBy": [
             {
@@ -1303,15 +1303,15 @@
   "tags": [
     "Docker",
     "Telegraf",
-    "InfluxDB"
+    "influxdb_docker"
   ],
   "templating": {
     "list": [
       {
         "current": {},
         "datasource": {
-          "type": "influxdb",
-          "uid": "${DS_INFLUXDB}"
+          "type": "influxdb_docker",
+          "uid": "${DS_influxdb_docker}"
         },
         "definition": "",
         "hide": 0,
@@ -1332,8 +1332,8 @@
       {
         "current": {},
         "datasource": {
-          "type": "influxdb",
-          "uid": "${DS_INFLUXDB}"
+          "type": "influxdb_docker",
+          "uid": "${DS_influxdb_docker}"
         },
         "definition": "",
         "hide": 0,
